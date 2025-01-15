@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Protest+Guerrilla&family=Teko:wght@300..700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inria Sans";
+    margin: 0;
+    padding: 0;
+    background-color: #2B292D;
+    color: white;
+    width: fit-content;
+    margin: auto;
+}
+
+.navbar {
+    background-color: #2A4061;
+    padding: 3px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+nav ul {
+    list-style-type: none; 
+    padding: 0; 
+    display: flex; 
+    justify-content: center; 
+    gap: 40px; 
+}
+
+nav ul li a {
+    text-decoration: none; 
+    color: white; 
+    font-size: 17px; 
+    transition: color 0.3s; 
+}
+
+#Title {
+    color: white;
+}
+
+
+#login {
+    font-family: "Inria Sans";
+    background-color: #734935;
+    color: rgb(255, 255, 255);
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+#login:hover {
+    background-color: #81513b;
+}
+
+#signup {
+    font-family: "Inria Sans";
+    background-color: #734935;
+    color: rgb(255, 255, 255);
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+#signup:hover {
+    background-color: #81513b;
+}
+
+#home {
+    padding-top: 110px;
+}
+
+#container {
+    display: flex;
+    padding: 0px 50px;
+    gap: 70px;
+    width: fit-content;
+    margin: auto;
+} 
+
+#cypher img {
+    padding: 0px 90px;
+    width: auto;
+    height: 430px;
+}
+
+#bio {
+    padding: 90px 0px;
+    width: 500px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+#clips {
+    display: flex;
+    gap: 65px;
+    padding: 50px 20px;
+    width: fit-content;
+    margin: auto;
+}
+
+#clips video {
+    width: 530px;
+    height: auto;
+}
+
+hr {
+    width: 95%;
+    border: none;
+    border-top: 1.5px solid #46E0E2; 
+}
+
+#about {
+    padding: 50px 50px;
+    text-align: center;
+}
+
+#backstory {
+    padding-bottom: 100px;
+}
+
+#backstory p {
+    font-size: 18px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#container2 {
+    display: flex;
+    width: fit-content;
+    margin: auto;
+}
+
+#abilityvid {
+    max-width: 550px;
+}
+
+.imgs {
+    padding: 30px 50px;
+    display: flex;
+    width: 70px;
+    height: auto;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.interactive:hover {
+    filter: brightness(65%);
+    transition: all 0.5s ease;
+}
+
+#videoDescription {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#art {
+    padding: 50px 50px;
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+}
+
+/*Modal styling*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #C6C5C8;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+    text-align: left;
+    color: black;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-content form input[type="email"],
+.modal-content form input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.modal-content form input[type="submit"] {
+    background-color: #734935;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content form input[type="submit"]:hover {
+    background-color: #734935;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close:hover {
+    color: black;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/*Makes elements visible when in view*/
+.fade-in.visible {
+    opacity: 1;
+}
+
+#conceptart {
+    display: flex;
+    gap: 20px;
+    padding: 30px 0px;
+}
+
+#conceptart img{
+    width: 500px;
+    height: auto;
+}
+
+#bannerart {
+    display: flex;
+    gap: 35px;
+    padding: 30px 0px;
+}
+
+#bannerart img{
+    width: auto;
+    height: 400px;
+}
+
+@media (max-width: 426px) {
+    body {
+        font-size: 12px;
+        padding: 5px;
+
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    #Title, #login, #signup {
+        font-size: 60px;
+    }
+
+   
+    #home {
+        padding: 60px 10px;
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 200px;
+        gap: 0px;
+    }
+
+    #cypher img {
+        width: 60%;
+        height: auto;
+    }
+
+    #bio {
+        font-size: 40px;
+        width: 800px;
+    }
+
+    
+    #clips {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #clips video {
+        width: 100%;
+        height: auto;
+    }
+
+    
+    h1 {
+        font-size: 40px;
+    }
+
+    #about h2 {
+        font-size: 33px;
+    }
+
+    #about p {
+        font-size: 38px;
+        width: 800px;
+        text-align: center;
+    }
+
+    #backstory p {
+        text-align: justify;
+    }
+
+    #container2 {
+        display: flex;
+        gap: 20px;
+        padding: 0px 10px;
+        max-width: fit-content;
+        margin: auto;
+    }
+
+    #abilityvid {
+        max-width: fit-content;
+    }
+
+    #videoDescription {
+        max-width: fit-content;
+    }
+
+    .imgs {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        gap: 60px;
+        width: 90px;
+        padding-top: 60px;
+    }
+
+    #Video {
+        width: 700px;
+        height: auto;
+    }
+
+    #art {
+        margin: auto;
+        padding: 50px 0px;
+    }
+
+    #conceptart {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #conceptart img {
+        margin: auto;
+        width: 90%;
+    }
+
+    /* Banner art in a 2x2 grid */
+    #bannerart {
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #bannerart img{
+        margin: auto;
+        width: 90%;
+        height: auto;
+    }
+
+    .modal-content {
+        width: 95%;
+        font-size: 20px;
+    }
+}

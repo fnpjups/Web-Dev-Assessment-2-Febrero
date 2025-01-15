@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+              href="frontend\style.css">
+        <title>Va-lore-rant Cypher</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <h1 id="Title">VAL- LORE -RANT</h1>
+                <ul>
+                    <li><a href="#home" class="hide">Home</a></li>
+                    <li><a href="#about" class="hide">About</a></li>
+                    <li><a href="#art" class="hide">Art Work</a></li>
+                    <li><a href="#login" id="login">Login</a></li>
+                    <li><a href="#register" id="signup">Sign Up</a></li>
+                </ul>
+                
+            </nav>
+        </header>
+        <main>
+            <section id="home">
+                <div id="container"> <!--This div will act as a container which holds the content inside-->
+                    <div id="cypher"> <!--Seperate divs for each part to make it easier to layout and customise-->
+                        <img src="frontend/Assets/Cypher.png" alt="Picture of Cypher">
+                    </div>
+                    <div id="bio">
+                        <p>
+                            <b>Cypher</b> is a sentinel agent from the first person shooter game valorant. He is the 
+                            5th agent to join and acts as a spy and information broker for the valorant protocol. 
+                            He is of morroccan decent and relies on his abilities to ambush and catch the enemy off 
+                            guard. <i>“No secret is safe and no maneuver unseen as Cypher is always watching.”</i>
+                        </p>
+                    </div>
+                </div>
+                <div id="clips" class="fade-in">
+                    <video autoplay muted loop>
+                        <source src="frontend\Assets\Cypher clip 1.mp4" type="video/mp4">
+                    </video>
+                    <video autoplay muted loop>
+                        <source src="frontend\Assets\Cypher Clip 2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <hr>
+            </section>
+            <section id="about" class="fade-in">
+                <div id="backstory">
+                    <h1>BACKSTORY</h1>
+                    <p>
+                        Amir El Amari (Arabic: أمير العماري meaning "prince of the moon") more known as Cypher, is 
+                        from Rabat Morocco. The town that he grew up in was depleted of resources by Kingdom 
+                        Corporation which resulted in his hate for them. Cypher used to work alone before being 
+                        recruited by the Valorant Protocol and seem to have lost his family but occasionally will 
+                        mention someone named Nora. As an information broker, he gathers intel and keeps to himself 
+                        being especially careful about his own information. Cypher is never seen without his black 
+                        mask covering his face and has multiple safe houses in order to remain in the dark as much 
+                        as possible.
+                    </p>
+                </div>
+                <br>
+                <div id="abilities" class="fade-in">
+                    <h1>ABILITIES</h1>
+                    <div id="container2">
+                        <div class="imgs"> <!--When the images are clicked, the corresponding video will play according to its assigned function-->
+                            <img src="frontend/Assets/Cyber Cage.png" class="interactive" id="video1Btn" onclick="loadVideo1()" value="Load Video 1">
+                            <img src="frontend/Assets/Spycam.png" class="interactive" id="video2Btn" onclick="loadVideo2()" value="Load Video 2">
+                        </div>
+                        <div id="abilityvid">
+                            <video id="Video" width="550" autoplay loop > <!--Area where video will play-->
+                                <source type="video/mp4">
+                            </video>
+                            <h2 id="videoHeading"></h2> <!--For video title-->
+                            <p id="videoDescription"></p> <!--For video description-->
+                        </div>
+                        <div class="imgs">
+                            <img src="frontend/Assets/Trapwire.png" class="interactive" id="video3Btn" onclick="loadVideo3()" value="Load Video 3">
+                            <img src="frontend/Assets/Neautral theft.png" class="interactive" id="video4Btn" onclick="loadVideo4()" value="Load Video 4">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section id="art">
+                <h1>ART WORK</h1>
+                <div id="conceptart" class="fade-in">
+                    <img src="frontend/Assets/Cypher art1.png" alt="Cypher img1">
+                    <img src="frontend/Assets/Cypher art2.png" alt="Cypher img1">
+                </div>
+                <div id="bannerart" class="fade-in">
+                    <img src="frontend/Assets/Cypher art3.png" alt="Cypher img1">
+                    <img src="frontend/Assets/Cypher art4.png" alt="Cypher img1">
+                    <img src="frontend/Assets/Cypher art5.png" alt="Cypher img1">
+                    <img src="frontend/Assets/Cypher art6.png" alt="Cypher img1">
+                </div>
+                
+            </section>
+        </main>
+        <!-- Login Modal -->
+        <div id="login-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="close-login">&times;</span>
+                <h2>Login</h2>
+                <form>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required><br>
+                    <input type="submit" value="Login" class="login-button" id="login-btn">
+                </form>
+            </div>
+        </div>
+        <!-- Sign Up Modal -->
+        <div id="signup-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="close-signup">&times;</span>
+                <h2>Sign Up</h2>
+                <form>
+                    <label for="email-signup">Email:</label>
+                    <input type="email" id="email-signup" name="email-signup" required>
+                    <label for="password-signup">Password:</label>
+                    <input type="password" id="password-signup" name="password-signup" required><br>
+                    <input type="submit" value="Sign Up" class="login-button" id="signup-btn">
+                </form>
+            </div>
+        </div>
+    </body>
+    <script src="frontend\index.js"></script>
+</html>
